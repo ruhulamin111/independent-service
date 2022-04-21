@@ -1,9 +1,9 @@
-.service {
+.expert {
     border: 1px solid seagreen;
     border-radius: 20px;
     padding: 10px;
 }
 
-.service img {
+.expert img {
     border-radius: 20px;
 }
