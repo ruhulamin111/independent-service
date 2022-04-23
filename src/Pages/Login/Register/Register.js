@@ -1,41 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
+import { async } from '@firebase/util';
+
 
 
 const Register = () => {
+
+
+    const [agree, setAgree] = useState(false);
+
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const navigate = useNavigate();
+
     const navigateRegister = event => {
         navigate('/login')
     }
-    const handleRegister = event => {
+
+    const handleRegister = async (event) => {
         event.preventDefault();
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
 
-        createUserWithEmailAndPassword(email, password)
-    }
+        await createUserWithEmailAndPassword(email, password)
 
-    if (user) {
+        await updateProfile({ displayName: name });
+        alert('Updated profile');
         navigate('/home')
     }
+
+
 
     return (
         <div className='container w-50 mx-auto'>
             <h3>This is Register</h3>
             <Form onSubmit={handleRegister} >
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Control name="name" type="text" placeholder="Full Name" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -45,8 +56,11 @@ const Register = () => {
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Control name="password" type="password" placeholder="Password" required />
                 </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                    <Form.Check onClick={() => setAgree(!agree)} type="checkbox" label="Terms and Condition for Advise" />
+                </Form.Group>
 
-                <Button className='w-100' variant="primary" type="submit">
+                <Button disabled={!agree} className='w-100' variant="primary" type="submit">
                     Register
                 </Button>
             </Form>
