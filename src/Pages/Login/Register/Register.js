@@ -44,7 +44,7 @@ const Register = () => {
 
     return (
         <div className='container w-50 mx-auto'>
-            <h3>This is Register</h3>
+            <h3 className='text-center text-info my-3 '>Please Register</h3>
             <Form onSubmit={handleRegister} >
                 <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Control name="name" type="text" placeholder="Full Name" required />
@@ -64,7 +64,7 @@ const Register = () => {
                     Register
                 </Button>
             </Form>
-            <p>Have an Account?  <Link to='/login' className='text-danger text-decoration-none pe-auto' onClick={navigateRegister}>Please Log In</Link></p>
+            <p className='my-3'>Have an Account?  <Link to='/login' className='text-danger text-decoration-none pe-auto' onClick={navigateRegister}>Please Log In</Link></p>
             <SocialLogin></SocialLogin>
         </div >
     );

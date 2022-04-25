@@ -6,9 +6,9 @@ const Expert = ({ expert }) => {
     return (
         <div className='expert'>
             <img src={img} alt="" height={'300px'} width={'100%'} />
-            <h4>Name: {name}</h4>
-            <h5>Price:{price} </h5>
-            <p>Description:{description} </p>
+            <h5 className='my-3'>Name: {name}</h5>
+            <p>Description: {description} </p>
+            <h6>Price: {price} </h6>
         </div>
     );
 };
