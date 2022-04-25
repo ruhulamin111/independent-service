@@ -1,42 +1,42 @@
 [
     {
         "id": "1",
-        "name": "Shamsul Arefin",
+        "name": "Spine Surgery",
         "img": "https://i.ibb.co/mDt7NsJ/doctor1.jpg",
         "price": "500",
         "description": "Instantly find Top-Rated Providers for Free. Verified Reviews. Search, Compare, Rate, and Schedule Care with Physicians, Dentists, Chiropractors, Acupuncturists, Nurse Practitioners, Counselors, and more on Advise."
     },
     {
         "id": "2",
-        "name": "Asif Adnan",
+        "name": "Neurosurgery",
         "img": "https://i.ibb.co/mDt7NsJ/doctor1.jpg",
         "price": "400",
         "description": "Instantly find Top-Rated Providers for Free. Verified Reviews. Search, Compare, Rate, and Schedule Care with Physicians, Dentists, Chiropractors, Acupuncturists, Nurse Practitioners, Counselors, and more on Advise."
     },
     {
         "id": "3",
-        "name": "Sajid Islam",
+        "name": "Orthopedic Surgery",
         "img": "https://i.ibb.co/mDt7NsJ/doctor1.jpg",
         "price": "300",
         "description": "Instantly find Top-Rated Providers for Free. Verified Reviews. Search, Compare, Rate, and Schedule Care with Physicians, Dentists, Chiropractors, Acupuncturists, Nurse Practitioners, Counselors, and more on Advise."
     },
     {
         "id": "4",
-        "name": "Ariful Islam",
+        "name": "Therapist",
         "img": "https://i.ibb.co/mDt7NsJ/doctor1.jpg",
         "price": "200",
         "description": "Instantly find Top-Rated Providers for Free. Verified Reviews. Search, Compare, Rate, and Schedule Care with Physicians, Dentists, Chiropractors, Acupuncturists, Nurse Practitioners, Counselors, and more on Advise."
     },
     {
         "id": "5",
-        "name": "Arif Azad",
+        "name": "Transplant Surgery",
         "img": "https://i.ibb.co/mDt7NsJ/doctor1.jpg",
         "price": "100",
         "description": "Instantly find Top-Rated Providers for Free. Verified Reviews. Search, Compare, Rate, and Schedule Care with Physicians, Dentists, Chiropractors, Acupuncturists, Nurse Practitioners, Counselors, and more on Advise."
     },
     {
         "id": "6",
-        "name": "Asif Mahmud",
+        "name": "Dentist",
         "img": "https://i.ibb.co/mDt7NsJ/doctor1.jpg",
         "price": "50",
         "description": "Instantly find Top-Rated Providers for Free. Verified Reviews. Search, Compare, Rate, and Schedule Care with Physicians, Dentists, Chiropractors, Acupuncturists, Nurse Practitioners, Counselors, and more on Advise."
